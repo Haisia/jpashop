@@ -11,11 +11,16 @@ import javax.persistence.*;
 public class Delivery {
   @Id
   @GeneratedValue
+  @Column(name = "delivery_id")
   private Long id;
+
   @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "delivery_id")
   private Order order;
+
   @Embedded
   private Address address;
+
+  @Enumerated(EnumType.STRING)
   private DeliveryStatus status;
 }
