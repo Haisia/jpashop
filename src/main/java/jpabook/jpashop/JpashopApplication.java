@@ -11,11 +11,11 @@ import javax.persistence.Persistence;
 @SpringBootApplication
 public class JpashopApplication {
 	public static void main(String[] args) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
-		EntityManager em = emf.createEntityManager();
-		EntityTransaction trx = em.getTransaction();
-		trx.begin();
-		trx.commit();
+//		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
+//		EntityManager em = emf.createEntityManager();
+//		EntityTransaction trx = em.getTransaction();
+//		trx.begin();
+//		trx.commit();
 		SpringApplication.run(JpashopApplication.class, args);
 	}
 

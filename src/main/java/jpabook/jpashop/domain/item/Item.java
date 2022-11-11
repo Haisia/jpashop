@@ -5,12 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
-@MappedSuperclass
 @Getter
 @Setter
 @DiscriminatorColumn(name = "dtype")
+@Entity
 public abstract class Item {
   @Id
   @GeneratedValue
@@ -21,8 +22,7 @@ public abstract class Item {
   private int price;
   private int stockQuantity;
 
-  @ManyToMany(fetch = FetchType.LAZY,
-              mappedBy = "items")
-  private List<Category> categories;
+  @ManyToMany(mappedBy = "items")
+  private List<Category> categories = new ArrayList<>();
 
 }
