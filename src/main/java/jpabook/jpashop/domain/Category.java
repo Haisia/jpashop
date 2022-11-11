@@ -8,8 +8,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
+@Entity
+@Table(name = "Category")
 @Setter
 public class Category {
   @Id
