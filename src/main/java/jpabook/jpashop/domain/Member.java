@@ -20,8 +20,7 @@ public class Member {
   @Embedded
   private Address address;
 
-  @OneToMany(
-          fetch = FetchType.LAZY,
-          mappedBy = "member")
+  @OneToMany(mappedBy = "member")
   private List<Order> orders = new ArrayList<>();
+
 }
