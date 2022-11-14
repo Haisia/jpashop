@@ -7,7 +7,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+#      ddl-auto: create
+      ddl-auto: none
     properties:
       hibernate:
 #        sout 로 로그 찍음 (사용 비권장)
